@@ -1,0 +1,67 @@
+/* The page that lists the tools in the suite, on top of shared/css/base.css. */
+
+html:has(body.landing), body.landing { overflow: auto; height: auto; min-height: 100%; }
+/* Heading, cards and name form one block in the middle of the page; the heading starts
+   at the cards' left edge and the name ends at their right edge. */
+body.landing { --suite: 1140px; min-height: 100vh; background: var(--canvas); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 56px 32px; }
+.suite { width: min(var(--suite), 100%); }
+/* The negative margin puts the first letter itself, not its side bearing, on the edge. */
+.suite h1 { margin: 0 0 34px -0.09em; font-weight: 300; font-size: 40px; line-height: 1.1; color: #7d776d; }
+.tools { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 960px) { body.landing { --suite: 760px; } .tools { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .tools { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 720px) { body.landing { padding: 40px 24px; } .suite h1 { font-size: 32px; margin-bottom: 26px; } }
+.tool { display: flex; flex-direction: column; height: 100%; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); text-decoration: none; overflow: hidden; transition: border-color 0.15s, box-shadow 0.15s; }
+.tool:hover { border-color: var(--border-strong); box-shadow: var(--shadow); }
+.tool:hover .tool-name { color: var(--accent-strong); }
+.tool-art { display: block; background: var(--bg); border-bottom: 1px solid var(--border); }
+.tool-art svg { display: block; width: 100%; height: auto; }
+.tool-text { display: flex; flex-direction: column; gap: 3px; padding: 14px 18px 18px; }
+.tool-name { font-weight: 500; font-size: 16px; }
+.tool-desc { color: var(--text-2); }
+/* Under the cards: the prompts, then the name as the last line, ending at the cards' right edge. */
+.suite-foot { margin-top: 32px; }
+.landing-foot { margin-top: 24px; text-align: right; font-size: 11.5px; color: var(--text-3); }
+/* The text keeps a readable width; the buttons may use the whole row and wrap only when it is too narrow. */
+.prompts { font-size: 13px; line-height: 1.5; color: var(--text-2); }
+.prompts h2 { margin: 0 0 2px; font-size: 14px; font-weight: 500; color: var(--text); }
+.prompts p { margin: 0 0 16px; max-width: 860px; }
+.prompts code { font-size: 12px; }
+.prompt-links { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; }
+/* A prompt: its name, then show, download and copy. */
+.prompt { display: inline-flex; align-items: center; gap: 1px; height: 30px; padding: 0 3px 0 11px; border: 1px solid var(--border); border-radius: 15px; background: var(--surface); font-size: 12.5px; color: var(--text); }
+.prompt-name { margin-right: 4px; white-space: nowrap; }
+/* "prompt" after each name and the grid for buttons that must wrap: see landing.js. */
+.prompt-links.short .prompt-word { display: none; }
+.prompt-links.grid { display: grid; grid-template-columns: repeat(var(--cols), var(--cell)); }
+.prompt-links.grid .prompt-name { margin-right: auto; }
+.prompt-act { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; padding: 0; border: none; border-radius: 12px; background: none; color: var(--text-3); cursor: pointer; transition: background 0.15s, color 0.15s; }
+.prompt-act:hover { background: var(--accent-soft); color: var(--accent-strong); }
+.prompt-act:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.prompt-act .icon { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.prompt-act.done { color: #2f7d55; }
+.prompt-act.failed { color: #b3453c; }
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+.prompts .prompts-local { display: flex; align-items: flex-start; gap: 6px; margin: 12px 0 0; max-width: none; font-size: 12px; color: var(--text-3); }
+.prompts-local .icon { flex: none; margin-top: 2px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.prompts-local code { font-size: 11.5px; }
+
+/* ---- the graph on a card moves a little while the pointer (or the keyboard) is on it ---- */
+.tool-art .faint { opacity: 0; }
+.tool-art .light { visibility: hidden; }
+@media (prefers-reduced-motion: no-preference) {
+  .tool-art .move, .tool-art .grow, .tool-art .dot { transform-box: fill-box; transform-origin: var(--hold, center); }
+  .tool-art .move { transition: transform 0.7s cubic-bezier(0.45, 0.05, 0.25, 1); }
+  .tool:is(:hover, :focus-visible) .move { transform: var(--to); }
+  .tool-art .turn { transform-origin: 0 0; transition: transform 0.9s cubic-bezier(0.45, 0.05, 0.25, 1); }
+  .tool:is(:hover, :focus-visible) .turn { transform: rotate(16deg); }
+  .tool:is(:hover, :focus-visible) .grow { animation: card-grow 0.42s cubic-bezier(0.3, 0.7, 0.3, 1) var(--wait, 0s) backwards; }
+  .tool:is(:hover, :focus-visible) .faint { opacity: 0.3; }
+  .tool:is(:hover, :focus-visible) .draw { animation: card-draw 1s cubic-bezier(0.45, 0.05, 0.35, 1); }
+  .tool:is(:hover, :focus-visible) .dot { animation: card-dot 0.36s ease-out var(--wait, 0s) backwards; }
+  .tool:is(:hover, :focus-visible) .light { visibility: visible; animation: card-light 2.4s cubic-bezier(0.4, 0.1, 0.5, 0.95) infinite; }
+}
+@keyframes card-grow { from { transform: scaleY(0); } }
+@keyframes card-draw { from { stroke-dasharray: 1; stroke-dashoffset: 1; } to { stroke-dasharray: 1; stroke-dashoffset: 0; } }
+@keyframes card-dot { from { transform: scale(0.3); opacity: 0.2; } 70% { transform: scale(1.18); opacity: 1; } }
+@keyframes card-light { from { transform: translateX(0); } 75%, to { transform: translateX(360px); } }

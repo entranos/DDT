@@ -1,0 +1,20 @@
+/* Treemap editor: styles for its canvas and panels, on top of shared/css/base.css. */
+
+/* ---- canvas ---- */
+.diagram .tile { transition: fill 0.15s; }
+.hit-tile, .hit-legend { cursor: pointer; }
+.hit-head { cursor: grab; }
+.sel-tile, .sel-tile-rim, .sel-related, .sel-block, .issue-tile { fill: none; pointer-events: none; }
+.sel-tile { stroke: var(--accent); }
+.sel-tile-rim { stroke: #fff; }
+.sel-related { stroke: var(--accent); stroke-opacity: 0.75; stroke-dasharray: none; }
+.sel-block { stroke: var(--accent); }
+.issue-tile { stroke: #d99a26; stroke-dasharray: 4 3; }
+.block-hit:hover .add-handle, .block-hit.selected .add-handle { opacity: 1; }
+.drop-source { fill: var(--bg); fill-opacity: 0.6; pointer-events: none; }
+
+.tt-parts { border-top: 1px solid var(--border); padding-top: 5px; color: var(--text-2); }
+.tt-parts strong { font-weight: 400; }
+
+/* ---- right panel ---- */
+.scale-square { background: var(--accent); opacity: 0.7; border-radius: 2px; flex: none; }

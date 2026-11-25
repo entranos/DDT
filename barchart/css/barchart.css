@@ -1,0 +1,22 @@
+/* Bar chart editor: styles for its canvas and panels, on top of shared/css/base.css. */
+
+/* ---- canvas ---- */
+.diagram .part { transition: fill 0.12s; }
+.hit-part { cursor: ns-resize; }
+.is-horizontal .hit-part { cursor: ew-resize; }
+.hit-value, .hit-end { cursor: text; rx: 2px; }
+.hit-value:hover, .hit-end:hover { stroke: var(--border-strong); stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.hit-icon { cursor: grab; }
+.hit-legend { cursor: pointer; }
+.sel-item, .sel-related, .sel-frame { fill: none; pointer-events: none; }
+.sel-item { stroke: var(--accent); rx: 2px; }
+.sel-related { stroke: var(--accent); stroke-opacity: 0.6; rx: 2px; }
+.sel-frame { stroke: var(--accent); }
+.sel-frame.faint { stroke-opacity: 0.45; }
+.sel-frame.issue-item { stroke: #d99a26; stroke-dasharray: 4 3; }
+.add-bar { opacity: 0.55; }
+.add-bar:hover { opacity: 1; }
+
+/* ---- right panel ---- */
+.btn-row { display: flex; gap: 6px; }
+.scale-stick { background: var(--accent); opacity: 0.7; border-radius: 2px; flex: none; }

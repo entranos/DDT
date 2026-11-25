@@ -1,0 +1,268 @@
+type: treemap
+version: '1.0'
+blocks:
+  - id: industrie
+    title: Industrie
+    group: Finaal verbruik
+    icon: industry
+    visible: true
+  - id: gebouwde_omgeving
+    title: Gebouwde omgeving
+    group: Finaal verbruik
+    icon: buildings
+    visible: true
+  - id: landbouw
+    title: Landbouw
+    group: Finaal verbruik
+    icon: agriculture
+    visible: true
+  - id: mobiliteit_nationaal
+    title: Mobiliteit nationaal
+    group: Finaal verbruik
+    icon: car
+    visible: true
+  - id: mobiliteit_internationaal
+    title: Mobiliteit internationaal
+    group: Finaal verbruik
+    icon: plane
+    visible: true
+  - id: elektriciteitsproductie
+    title: Elektriciteitsproductie
+    group: Conversie (input)
+    icon: power-plant
+    visible: true
+  - id: waterstofproductie
+    title: Waterstofproductie
+    group: Conversie (input)
+    icon: electrolysis
+    visible: true
+  - id: brand_en_grondstofproductie
+    title: Brand- en grondstofproductie
+    group: Conversie (input)
+    icon: refinery
+    visible: true
+values:
+  - block: industrie
+    carrier: electricity
+    part: ''
+    value: 172
+    note: ''
+  - block: industrie
+    carrier: heat
+    part: ''
+    value: 64
+    note: ''
+  - block: industrie
+    carrier: hydrogen
+    part: ''
+    value: 58
+    note: ''
+  - block: industrie
+    carrier: methane
+    part: ''
+    value: 118
+    note: ''
+  - block: industrie
+    carrier: oil_products
+    part: ''
+    value: 196
+    note: ''
+  - block: industrie
+    carrier: coal_products
+    part: ''
+    value: 52
+    note: ''
+  - block: industrie
+    carrier: biomassa_product
+    part: ''
+    value: 41
+    note: ''
+  - block: gebouwde_omgeving
+    carrier: electricity
+    part: ''
+    value: 188
+    note: ''
+  - block: gebouwde_omgeving
+    carrier: heat
+    part: ''
+    value: 57
+    note: ''
+  - block: gebouwde_omgeving
+    carrier: methane
+    part: ''
+    value: 132
+    note: ''
+  - block: gebouwde_omgeving
+    carrier: biomassa_product
+    part: ''
+    value: 23
+    note: ''
+  - block: gebouwde_omgeving
+    carrier: omgevingswarmte
+    part: ''
+    value: 74
+    note: ''
+  - block: landbouw
+    carrier: electricity
+    part: ''
+    value: 39
+    note: ''
+  - block: landbouw
+    carrier: heat
+    part: ''
+    value: 28
+    note: ''
+  - block: landbouw
+    carrier: methane
+    part: ''
+    value: 47
+    note: ''
+  - block: landbouw
+    carrier: biomassa_product
+    part: ''
+    value: 9
+    note: ''
+  - block: mobiliteit_nationaal
+    carrier: electricity
+    part: ''
+    value: 71
+    note: ''
+  - block: mobiliteit_nationaal
+    carrier: hydrogen
+    part: ''
+    value: 17
+    note: ''
+  - block: mobiliteit_nationaal
+    carrier: oil_products
+    part: ''
+    value: 214
+    note: ''
+  - block: mobiliteit_nationaal
+    carrier: biomassa_product
+    part: ''
+    value: 36
+    note: ''
+  - block: mobiliteit_internationaal
+    carrier: oil_products
+    part: ''
+    value: 318
+    note: ''
+  - block: mobiliteit_internationaal
+    carrier: biomassa_product
+    part: ''
+    value: 62
+    note: ''
+  - block: mobiliteit_internationaal
+    carrier: hydrogen
+    part: ''
+    value: 24
+    note: ''
+  - block: elektriciteitsproductie
+    carrier: methane
+    part: ''
+    value: 148
+    note: ''
+  - block: elektriciteitsproductie
+    carrier: coal_products
+    part: ''
+    value: 34
+    note: ''
+  - block: elektriciteitsproductie
+    carrier: biomassa_product
+    part: ''
+    value: 48
+    note: ''
+  - block: elektriciteitsproductie
+    carrier: wind
+    part: ''
+    value: 236
+    note: ''
+  - block: elektriciteitsproductie
+    carrier: solar_pv
+    part: ''
+    value: 118
+    note: ''
+  - block: elektriciteitsproductie
+    carrier: non_biogenic_waste
+    part: ''
+    value: 31
+    note: ''
+  - block: waterstofproductie
+    carrier: electricity
+    part: ''
+    value: 84
+    note: ''
+  - block: waterstofproductie
+    carrier: methane
+    part: ''
+    value: 92
+    note: ''
+  - block: brand_en_grondstofproductie
+    carrier: oil_ruw
+    part: ''
+    value: 462
+    note: ''
+  - block: brand_en_grondstofproductie
+    carrier: biomassa_product
+    part: ''
+    value: 54
+    note: ''
+  - block: brand_en_grondstofproductie
+    carrier: hydrogen
+    part: ''
+    value: 33
+    note: ''
+carriers:
+  - id: electricity
+    title: Elektriciteit
+    color: '#E0A93B'
+    icon: electricity
+  - id: heat
+    title: Warmte
+    color: '#C8586F'
+    icon: heat
+  - id: hydrogen
+    title: Waterstof
+    color: '#7862C6'
+    icon: hydrogen
+  - id: methane
+    title: Methaan
+    color: '#3B78B0'
+    icon: gas
+  - id: oil_products
+    title: Olieproducten
+    color: '#6B655C'
+    icon: oil
+  - id: oil_ruw
+    title: Ruwe aardolie
+    color: '#8C8172'
+    icon: crude-oil
+  - id: coal_products
+    title: Kolen
+    color: '#4A4641'
+    icon: coal
+  - id: biomassa_product
+    title: Biomassa
+    color: '#5FA98A'
+    icon: biofuel
+  - id: omgevingswarmte
+    title: Omgevingswarmte
+    color: '#A9A196'
+    icon: ambient-heat
+  - id: wind
+    title: Wind
+    color: '#7CC2A0'
+    icon: wind
+  - id: solar_pv
+    title: Zon-PV
+    color: '#C9B45A'
+    icon: solar
+  - id: non_biogenic_waste
+    title: Afval
+    color: '#9B948A'
+    icon: waste
+settings:
+  - setting: title
+    waarde: Energie-input per sector (voorbeeld met fictieve waarden)
+  - setting: unit
+    waarde: PJ

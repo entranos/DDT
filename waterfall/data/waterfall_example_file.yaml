@@ -1,0 +1,234 @@
+type: waterfall
+version: '1.0'
+diagrams:
+  - id: opbouw
+    title: Opbouw
+    subtitle: CO₂-vrij
+    visible: true
+  - id: afbouw
+    title: Afbouw
+    subtitle: Fossiel
+    visible: true
+moments:
+  - id: '2030'
+    title: '2030'
+    visible: true
+  - id: '2035'
+    title: '2035'
+    visible: true
+  - id: '2040'
+    title: '2040'
+    visible: true
+  - id: '2045'
+    title: '2045'
+    visible: true
+  - id: '2050'
+    title: '2050'
+    visible: true
+carriers:
+  - id: elektriciteit
+    title: Elektriciteit
+    color: '#E0A93B'
+    icon: electricity
+  - id: waterstof
+    title: Waterstof, ammoniak
+    color: '#7862C6'
+    icon: hydrogen
+  - id: warmte
+    title: Warmte
+    color: '#C8586F'
+    icon: heat
+  - id: biomassa
+    title: Biomassa
+    color: '#5FA98A'
+    icon: biofuel
+  - id: synthetisch
+    title: Synthetisch
+    color: '#DD8560'
+    icon: synthetic
+  - id: olie_kolen
+    title: Olie, kolen
+    color: '#6B655C'
+    icon: oil
+  - id: methaan
+    title: Methaan
+    color: '#3B78B0'
+    icon: gas
+  - id: aardwarmte
+    title: Aardwarmte
+    color: '#0A7350'
+    icon: geothermal
+  - id: omgevingswarmte
+    title: Omgevingswarmte
+    color: '#A9A196'
+    icon: ambient-heat
+values:
+  - diagram: opbouw
+    carrier: elektriciteit
+    amounts:
+      '2030': 300
+      '2035': 420
+      '2040': 520
+      '2045': 600
+      '2050': 660
+    note: ''
+  - diagram: opbouw
+    carrier: waterstof
+    amounts:
+      '2030': 4
+      '2035': 12
+      '2040': 40
+      '2045': 90
+      '2050': 150
+    note: ''
+  - diagram: opbouw
+    carrier: warmte
+    amounts:
+      '2030': 40
+      '2035': 52
+      '2040': 60
+      '2045': 72
+      '2050': 80
+    note: ''
+  - diagram: opbouw
+    carrier: biomassa
+    amounts:
+      '2030': 130
+      '2035': 210
+      '2040': 300
+      '2045': 380
+      '2050': 430
+    note: ''
+  - diagram: opbouw
+    carrier: synthetisch
+    amounts:
+      '2030': 0
+      '2035': 6
+      '2040': 18
+      '2045': 40
+      '2050': 90
+    note: ''
+  - diagram: opbouw
+    carrier: olie_kolen
+    amounts:
+      '2030': 0
+      '2035': 0
+      '2040': 0
+      '2045': 0
+      '2050': 0
+    note: ''
+  - diagram: opbouw
+    carrier: methaan
+    amounts:
+      '2030': 10
+      '2035': 22
+      '2040': 34
+      '2045': 40
+      '2050': 36
+    note: ''
+  - diagram: opbouw
+    carrier: aardwarmte
+    amounts:
+      '2030': 18
+      '2035': 44
+      '2040': 62
+      '2045': 70
+      '2050': 66
+    note: ''
+  - diagram: opbouw
+    carrier: omgevingswarmte
+    amounts:
+      '2030': 60
+      '2035': 96
+      '2040': 140
+      '2045': 178
+      '2050': 205
+    note: ''
+  - diagram: afbouw
+    carrier: elektriciteit
+    amounts:
+      '2030': 190
+      '2035': 120
+      '2040': 70
+      '2045': 40
+      '2050': 22
+    note: ''
+  - diagram: afbouw
+    carrier: waterstof
+    amounts:
+      '2030': 14
+      '2035': 12
+      '2040': 8
+      '2045': 3
+      '2050': 1
+    note: ''
+  - diagram: afbouw
+    carrier: warmte
+    amounts:
+      '2030': 70
+      '2035': 56
+      '2040': 40
+      '2045': 44
+      '2050': 20
+    note: ''
+  - diagram: afbouw
+    carrier: biomassa
+    amounts:
+      '2030': 0
+      '2035': 0
+      '2040': 0
+      '2045': 0
+      '2050': 0
+    note: ''
+  - diagram: afbouw
+    carrier: synthetisch
+    amounts:
+      '2030': 12
+      '2035': 9
+      '2040': 7
+      '2045': 4
+      '2050': 3
+    note: ''
+  - diagram: afbouw
+    carrier: olie_kolen
+    amounts:
+      '2030': 1480
+      '2035': 1290
+      '2040': 1040
+      '2045': 760
+      '2050': 590
+    note: ''
+  - diagram: afbouw
+    carrier: methaan
+    amounts:
+      '2030': 520
+      '2035': 560
+      '2040': 430
+      '2045': 280
+      '2050': 90
+    note: ''
+  - diagram: afbouw
+    carrier: aardwarmte
+    amounts:
+      '2030': 0
+      '2035': 0
+      '2040': 0
+      '2045': 0
+      '2050': 0
+    note: ''
+  - diagram: afbouw
+    carrier: omgevingswarmte
+    amounts:
+      '2030': 0
+      '2035': 0
+      '2040': 0
+      '2045': 0
+      '2050': 0
+    note: ''
+settings:
+  - setting: title
+    waarde: 'Finaal verbruik: opbouw en afbouw (voorbeeld met fictieve waarden)'
+  - setting: subtitle
+    waarde: Alle toepassingen | Alle sectoren
+  - setting: unit
+    waarde: PJ

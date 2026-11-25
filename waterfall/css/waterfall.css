@@ -1,0 +1,30 @@
+/* Waterfall editor: styles for its canvas and panels, on top of shared/css/base.css. */
+
+/* ---- canvas ---- */
+.diagram .segment, .diagram .step { transition: fill 0.12s; }
+.hit-step, .hit-segment { cursor: ns-resize; }
+.hit-change { cursor: text; rx: 2px; }
+.hit-change:hover { stroke: var(--border-strong); stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.hit-head { cursor: grab; }
+.hit-legend { cursor: pointer; }
+.sel-item, .sel-related, .sel-frame, .issue-item { fill: none; pointer-events: none; }
+.sel-item { stroke: var(--accent); rx: 2px; }
+.sel-related { stroke: var(--accent); stroke-opacity: 0.6; rx: 2px; }
+.sel-frame { stroke: var(--accent); }
+.issue-item { stroke: #d99a26; stroke-dasharray: 4 3; }
+.add-moment { opacity: 0.55; }
+.add-moment:hover { opacity: 1; }
+
+/* ---- right panel ---- */
+.diagram-choice { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.diagram-choice .segmented { max-width: 100%; }
+.diagram-choice .seg { max-width: 110px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; }
+.btn-row { display: flex; gap: 6px; }
+.scale-stick { width: 12px; background: var(--accent); opacity: 0.7; border-radius: 2px; flex: none; }
+.amount-table-wrap { overflow-x: auto; }
+.amount-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.amount-table th, .amount-table td { padding: 3px 5px; border-bottom: 1px solid var(--border); text-align: left; font-weight: 400; white-space: nowrap; }
+.amount-table thead th { color: var(--text-2); font-weight: 500; }
+.amount-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.amount-table tbody th { max-width: 110px; overflow: hidden; text-overflow: ellipsis; }
+.amount-table .total th, .amount-table .total td { font-weight: 500; border-bottom: none; }

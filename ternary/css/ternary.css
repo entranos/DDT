@@ -1,0 +1,41 @@
+/* Ternary editor: styles for its canvas and panels, on top of shared/css/base.css. */
+
+/* ---- canvas ---- */
+.diagram .series { transition: opacity 0.12s; }
+.diagram.has-hover .series:not(.hovered) { opacity: 0.35; }
+.hit-point { cursor: grab; }
+.hit-series, .hit-legend { cursor: pointer; }
+.hit-series { fill: none; pointer-events: stroke; }
+.hit-axis-text { cursor: text; rx: 3px; }
+.hit-axis-text:hover { stroke: var(--border-strong); stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.sel-series { fill: none; stroke: var(--accent); stroke-opacity: 0.22; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
+.sel-point { fill: none; stroke: var(--accent); pointer-events: none; }
+.issue-ring { fill: none; stroke-dasharray: 3 2; pointer-events: none; }
+.issue-ring-warning { stroke: #d99a26; }
+.issue-ring-error { stroke: #c9404c; }
+.guides-layer { pointer-events: none; font-family: var(--font); }
+
+/* ---- right panel ---- */
+.corner-block { border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-raised); padding: 8px 10px 10px; }
+.corner-head { display: flex; align-items: center; gap: 8px; font-weight: 500; margin-bottom: 6px; }
+.corner-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.corner-fields > .field { min-width: 0; }
+.corner-mark { width: 14px; height: 12px; flex: none; background: var(--border-strong); clip-path: polygon(0 0, 100% 0, 50% 100%); position: relative; }
+.corner-mark::after { content: ""; position: absolute; width: 6px; height: 6px; background: var(--accent); }
+.corner-left::after { left: 0; top: 0; }
+.corner-right::after { right: 0; top: 0; }
+.corner-bottom::after { left: 4px; bottom: 0; }
+
+.share-table { width: 100%; border-collapse: collapse; font-size: 12px; table-layout: fixed; margin-bottom: 6px; }
+.share-table th, .share-table td { padding: 3px 4px; border-bottom: 1px solid var(--border); text-align: left; font-weight: 400; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.share-table thead th { color: var(--text-2); font-weight: 500; }
+.share-table th:first-child { width: 46px; }
+.share-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+
+.mix-bar { display: flex; height: 12px; border-radius: 3px; overflow: hidden; gap: 1px; background: var(--bg); margin-bottom: 8px; }
+.mix-bar span { display: block; }
+.mix-row { display: flex; align-items: center; gap: 6px; padding: 2px 0; }
+.mix-row .dot { margin-right: 0; border-radius: 2px; }
+.mix-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text-2); }
+.mix-row strong { font-weight: 500; font-variant-numeric: tabular-nums; }
+.mix .mix-total { border-top: 1px solid var(--border); margin-top: 6px; padding-top: 6px; }

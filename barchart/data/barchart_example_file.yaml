@@ -1,0 +1,141 @@
+type: barchart
+version: '1.0'
+bars:
+  - title: Industrie
+    group: '2030'
+    amounts:
+      Elektriciteit: 190
+      Warmte: 80
+      Waterstof: 20
+      Biomassa: 45
+      Methaan: 230
+      Olieproducten: 190
+    icon: industry
+    visible: true
+    note: ''
+  - title: Gebouwde omgeving
+    group: '2030'
+    amounts:
+      Elektriciteit: 215
+      Warmte: 60
+      Waterstof: 0
+      Biomassa: 25
+      Methaan: 260
+      Olieproducten: 10
+    icon: buildings
+    visible: true
+    note: ''
+  - title: Landbouw
+    group: '2030'
+    amounts:
+      Elektriciteit: 48
+      Warmte: 30
+      Waterstof: 0
+      Biomassa: 12
+      Methaan: 82
+      Olieproducten: 8
+    icon: agriculture
+    visible: true
+    note: ''
+  - title: Mobiliteit
+    group: '2030'
+    amounts:
+      Elektriciteit: 55
+      Warmte: 0
+      Waterstof: 8
+      Biomassa: 40
+      Methaan: 6
+      Olieproducten: 330
+    icon: car
+    visible: true
+    note: ''
+  - title: Industrie
+    group: '2050'
+    amounts:
+      Elektriciteit: 340
+      Warmte: 95
+      Waterstof: 120
+      Biomassa: 60
+      Methaan: 60
+      Olieproducten: 70
+    icon: industry
+    visible: true
+    note: ''
+  - title: Gebouwde omgeving
+    group: '2050'
+    amounts:
+      Elektriciteit: 290
+      Warmte: 110
+      Waterstof: 15
+      Biomassa: 30
+      Methaan: 55
+      Olieproducten: 0
+    icon: buildings
+    visible: true
+    note: ''
+  - title: Landbouw
+    group: '2050'
+    amounts:
+      Elektriciteit: 72
+      Warmte: 48
+      Waterstof: 4
+      Biomassa: 18
+      Methaan: 14
+      Olieproducten: 2
+    icon: agriculture
+    visible: true
+    note: ''
+  - title: Mobiliteit
+    group: '2050'
+    amounts:
+      Elektriciteit: 185
+      Warmte: 0
+      Waterstof: 62
+      Biomassa: 70
+      Methaan: 2
+      Olieproducten: 48
+    icon: car
+    visible: true
+    note: ''
+series:
+  - id: Elektriciteit
+    title: Elektriciteit
+    color: '#E0A93B'
+    icon: electricity
+    visible: true
+  - id: Warmte
+    title: Warmte
+    color: '#C8586F'
+    icon: heat
+    visible: true
+  - id: Waterstof
+    title: Waterstof
+    color: '#7862C6'
+    icon: hydrogen
+    visible: true
+  - id: Biomassa
+    title: Biomassa
+    color: '#3F9A74'
+    icon: biofuel
+    visible: true
+  - id: Methaan
+    title: Methaan
+    color: '#3B78B0'
+    icon: gas
+    visible: true
+  - id: Olieproducten
+    title: Olieproducten
+    color: '#6B655C'
+    icon: oil
+    visible: true
+settings:
+  - setting: title
+    waarde: Energieverbruik per sector (voorbeeld met fictieve waarden)
+  - setting: subtitle
+    waarde: Finaal verbruik naar energiedrager
+  - setting: unit
+    waarde: PJ
+  - setting: orientation
+    waarde: vertical
+  - setting: mode
+    waarde: stacked

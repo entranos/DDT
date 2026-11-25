@@ -1,0 +1,13 @@
+# Negeer output en grote data
+/trash/
+/data/
+
+# Negeer alle .command files
+*.command
+.DS_Store
+~$*
+fluxdata*.yaml
+.~lock.*#
+
+# Voorbeeldbestand dat wel bij de editor hoort
+!sankey/data/fluxdata_example_file.yaml

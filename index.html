@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Diagram design toolkit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Editors for energy diagrams: Sankey diagrams, ternary diagrams, treemaps, waterfall diagrams, bar charts and chord diagrams.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 6h6c9 0 9 8 22 8v6C17 20 17 13 8 13H2z' fill='%233F88AE'/%3E%3Ccircle cx='24' cy='26' r='3.4' fill='%23DD5471'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="shared/css/fonts.css">
+  <link rel="stylesheet" href="shared/css/base.css">
+  <link rel="stylesheet" href="shared/css/landing.css">
+</head>
+<body class="landing">
+  <main class="suite">
+    <h1>Diagram design toolkit</h1>
+    <ul class="tools">
+      <li>
+        <a class="tool" href="sankey/">
+          <span class="tool-art">
+            <svg viewBox="0 0 360 210" aria-hidden="true">
+              <defs>
+              <clipPath id="flows"><path d="M48 34H192.5V88H48ZM48 112C110 112 132 88 192.5 88V108C132 108 110 132 48 132ZM48 148C120 148 132 140 192.5 140V168C132 168 120 176 48 176ZM195.5 34C249 34 262 44 312 44V78C262 78 249 68 195.5 68ZM195.5 68C249 68 262 102 312 102V142C262 142 249 108 195.5 108ZM195.5 140C249 140 262 154 312 154V182C262 182 249 168 195.5 168Z"/></clipPath>
+              <linearGradient id="light"><stop stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.42"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+              </defs>
+              <g>
+              <path fill="#6A99B5" d="M48 34H192.5V88H48Z"/>
+              <path fill="#D87D90" d="M48 112C110 112 132 88 192.5 88V108C132 108 110 132 48 132Z"/>
+              <path fill="#ECD290" d="M48 148C120 148 132 140 192.5 140V168C132 168 120 176 48 176Z"/>
+              <path fill="#6A99B5" d="M195.5 34C249 34 262 44 312 44V78C262 78 249 68 195.5 68Z"/>
+              <path fill="#89CCA9" d="M195.5 68C249 68 262 102 312 102V142C262 142 249 108 195.5 108Z"/>
+              <path fill="#ECD290" d="M195.5 140C249 140 262 154 312 154V182C262 182 249 168 195.5 168Z"/>
+              </g>
+              <g clip-path="url(#flows)"><rect class="light" x="-70" y="30" width="110" height="156" fill="url(#light)"/></g>
+              <g fill="#4a453d">
+              <rect x="45" y="34" width="3" height="54"/><rect x="45" y="112" width="3" height="20"/><rect x="45" y="148" width="3" height="28"/>
+              <rect x="192.5" y="34" width="3" height="74"/><rect x="192.5" y="140" width="3" height="28"/>
+              <rect x="312" y="44" width="3" height="34"/><rect x="312" y="102" width="3" height="40"/><rect x="312" y="154" width="3" height="28"/>
+              </g>
+            </svg>
+          </span>
+          <span class="tool-text">
+            <span class="tool-name">Sankey editor</span>
+            <span class="tool-desc">Flows between nodes, with widths on one fixed scale.</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="tool" href="ternary/">
+          <span class="tool-art">
+            <svg viewBox="0 0 360 210" aria-hidden="true">
+              <path d="M88 32H272L180 188Z" fill="none" stroke="#c8c1b5"/>
+              <g stroke="#ddd8cf" fill="none">
+              <path d="M111 71H249M134 110H226M157 149H203"/>
+              <path d="M134 32L203 149M180 32L226 110M226 32L249 71"/>
+              <path d="M134 32L111 71M180 32L134 110M226 32L157 149"/>
+              </g>
+              <g fill="none" stroke-linecap="round">
+              <path d="M181 178L180 166L178 152" stroke="#8C8479" stroke-width="2" stroke-dasharray="4 4"/>
+              <path class="faint" d="M178 152C176 128 170 96 162 62" stroke="#D87D90" stroke-width="2.4"/><path class="faint" d="M178 152C186 126 206 88 231 52" stroke="#89CCA9" stroke-width="2.4"/><path class="faint" d="M178 152C180 124 190 92 203 58" stroke="#6A99B5" stroke-width="4"/>
+              <path class="draw" pathLength="1" d="M178 152C176 128 170 96 162 62" stroke="#D87D90" stroke-width="2.4"/><path class="draw" pathLength="1" d="M178 152C186 126 206 88 231 52" stroke="#89CCA9" stroke-width="2.4"/><path class="draw" pathLength="1" d="M178 152C180 124 190 92 203 58" stroke="#6A99B5" stroke-width="4"/>
+              </g>
+              <g stroke="#fff">
+              <circle class="dot" style="--wait:0.3s" cx="174" cy="118" r="3.4" fill="#D87D90"/><circle class="dot" style="--wait:0.75s" cx="162" cy="62" r="5.4" fill="#D87D90"/>
+              <circle class="dot" style="--wait:0.4s" cx="201" cy="98" r="3.4" fill="#89CCA9"/><circle class="dot" style="--wait:0.75s" cx="231" cy="52" r="5.4" fill="#89CCA9"/>
+              <circle class="dot" style="--wait:0s" cx="178" cy="152" r="4" fill="#6A99B5"/><circle class="dot" style="--wait:0.28s" cx="183" cy="117" r="4" fill="#6A99B5"/><circle class="dot" style="--wait:0.52s" cx="192" cy="87" r="4" fill="#6A99B5"/><circle class="dot" style="--wait:0.75s" cx="203" cy="58" r="6.4" fill="#6A99B5"/>
+              </g>
+            </svg>
+          </span>
+          <span class="tool-text">
+            <span class="tool-name">Ternary editor</span>
+            <span class="tool-desc">Trajectories of a mix of three shares over the years.</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="tool" href="treemap/">
+          <span class="tool-art">
+            <svg viewBox="0 0 360 210" aria-hidden="true">
+              <defs>
+              <clipPath id="a"><rect x="48" y="34" width="118" height="92" rx="6"/></clipPath>
+              <clipPath id="b"><rect x="48" y="138" width="118" height="42" rx="6"/></clipPath>
+              <clipPath id="c"><rect x="180" y="34" width="60" height="146" rx="6"/></clipPath>
+              <clipPath id="d"><rect x="254" y="34" width="58" height="62" rx="6"/></clipPath>
+              <clipPath id="e"><rect x="254" y="108" width="58" height="72" rx="6"/></clipPath>
+              </defs>
+              <g>
+              <g clip-path="url(#a)"><path class="move" style="--hold:0 0;--to:scale(1.154,0.867)" fill="#ECD290" d="M48 34h52v60H48z"/><path class="move" style="--hold:0 100%;--to:scale(1.154,1.25)" fill="#D87D90" d="M48 94h52v32H48z"/><path class="move" style="--hold:100% 0;--to:scale(0.879,1.111)" fill="#6A99B5" d="M100 34h66v54h-66z"/><path class="move" style="--hold:100% 100%;--to:scale(0.733,0.842)" fill="#89CCA9" d="M100 88h30v38h-30z"/><path class="move" style="--hold:100% 100%;--to:scale(1,0.842)" fill="#ECD290" d="M130 88h36v38h-36z"/></g>
+              <g clip-path="url(#b)"><path class="move" style="--hold:0 0;--to:scaleX(0.833)" fill="#ECD290" d="M48 138h48v42H48z"/><path class="move" style="--hold:0 0;--to:translateX(-8px) scaleX(1.095)" fill="#6A99B5" d="M96 138h42v42H96z"/><path class="move" style="--hold:100% 0;--to:scaleX(1.143)" fill="#D87D90" d="M138 138h28v42h-28z"/></g>
+              <g clip-path="url(#c)"><path class="move" style="--hold:0 0;--to:scaleY(1.412)" fill="#ECD290" d="M180 34h60v34h-60z"/><path class="move" style="--hold:0 0;--to:translateY(14px) scaleY(0.929)" fill="#6A99B5" d="M180 68h60v84h-60z"/><path class="move" style="--hold:0 100%;--to:scaleY(0.714)" fill="#89CCA9" d="M180 152h60v28h-60z"/></g>
+              <g clip-path="url(#d)"><path class="move" style="--hold:0 0;--to:scaleX(0.778)" fill="#89CCA9" d="M254 34h36v62h-36z"/><path class="move" style="--hold:100% 0;--to:scaleX(1.364)" fill="#ECD290" d="M290 34h22v62h-22z"/></g>
+              <g clip-path="url(#e)"><path class="move" style="--hold:0 0;--to:scaleY(0.8)" fill="#D87D90" d="M254 108h58v50h-58z"/><path class="move" style="--hold:0 100%;--to:scaleY(1.455)" fill="#6A99B5" d="M254 158h58v22h-58z"/></g>
+              </g>
+            </svg>
+          </span>
+          <span class="tool-text">
+            <span class="tool-name">Treemap editor</span>
+            <span class="tool-desc">What totals are made up of, with every area on one scale.</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="tool" href="waterfall/">
+          <span class="tool-art">
+            <svg viewBox="0 0 360 210" aria-hidden="true">
+              <path d="M48 180H324" stroke="#c8c1b5"/>
+              <defs>
+              <clipPath id="wa"><path d="M56 180V117a5 5 0 0 1 5-5H91a5 5 0 0 1 5 5V180Z"/></clipPath>
+              <clipPath id="wb"><path d="M276 180V65a5 5 0 0 1 5-5H311a5 5 0 0 1 5 5V180Z"/></clipPath>
+              </defs>
+              <path d="M96 112H144M122 90H174M152 80H204M182 48H234M212 60H276" stroke="#8C8479" fill="none"/>
+              <g>
+              <g clip-path="url(#wa)"><path fill="#ECD290" d="M56 150h40v30H56z"/><path fill="#D87D90" d="M56 142h40v8H56z"/><path fill="#89CCA9" d="M56 130h40v12H56z"/><path fill="#6A99B5" d="M56 112h40v18H56z"/></g>
+              <g clip-path="url(#wb)"><path fill="#ECD290" d="M276 128h40v52H276z"/><path fill="#D87D90" d="M276 110h40v18H276z"/><path fill="#89CCA9" d="M276 66h40v44H276z"/><path fill="#6A99B5" d="M276 60h40v6H276z"/></g>
+              <rect class="grow" style="--hold:0 100%;--wait:0s" x="122" y="90" width="22" height="22" rx="2" fill="#ECD290"/><rect class="grow" style="--hold:0 100%;--wait:0.14s" x="152" y="80" width="22" height="10" rx="2" fill="#D87D90"/><rect class="grow" style="--hold:0 100%;--wait:0.28s" x="182" y="48" width="22" height="32" rx="2" fill="#89CCA9"/>
+              </g>
+              <rect class="grow" style="--hold:0 0;--wait:0.42s" x="212.6" y="48.6" width="20.8" height="10.8" rx="2" fill="#6A99B5" fill-opacity="0.18" stroke="#6A99B5" stroke-width="1.2"/>
+              <g class="grow" style="--hold:0 100%;--wait:0.56s"><path d="M255 112V70" stroke="#8C8479" stroke-width="1.2" stroke-dasharray="2.5 2.5"/><path d="M251 70h8l-4-7z" fill="#8C8479"/></g>
+            </svg>
+          </span>
+          <span class="tool-text">
+            <span class="tool-name">Waterfall editor</span>
+            <span class="tool-desc">How totals change step by step, in one or two synced diagrams.</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="tool" href="barchart/">
+          <span class="tool-art">
+            <svg viewBox="0 0 360 210" aria-hidden="true">
+              <path d="M48 136H312M48 92H312M48 48H312" stroke="#e6e1d8"/>
+              <defs>
+              <clipPath id="b0"><path d="M56 180V73a5 5 0 0 1 5-5H95a5 5 0 0 1 5 5V180Z"/></clipPath>
+              <clipPath id="b1"><path d="M116 180V35a5 5 0 0 1 5-5H155a5 5 0 0 1 5 5V180Z"/></clipPath>
+              <clipPath id="b2"><path d="M176 180V121a5 5 0 0 1 5-5H215a5 5 0 0 1 5 5V180Z"/></clipPath>
+              <clipPath id="b3"><path d="M256 180V41a5 5 0 0 1 5-5H295a5 5 0 0 1 5 5V180Z"/></clipPath>
+              </defs>
+              <g>
+              <g class="move" style="--hold:0 100%;--to:scaleY(1.16)" clip-path="url(#b0)"><path fill="#ECD290" d="M56 128h44v52H56z"/><path fill="#D87D90" d="M56 92h44v34H56z"/><path fill="#89CCA9" d="M56 68h44v22H56z"/></g>
+              <g class="move" style="--hold:0 100%;--to:scaleY(0.88)" clip-path="url(#b1)"><path fill="#ECD290" d="M116 136h44v44H116z"/><path fill="#D87D90" d="M116 114h44v20H116z"/><path fill="#89CCA9" d="M116 52h44v60H116z"/><path fill="#6A99B5" d="M116 30h44v20H116z"/></g>
+              <g class="move" style="--hold:0 100%;--to:scaleY(1.3)" clip-path="url(#b2)"><path fill="#ECD290" d="M176 152h44v28H176z"/><path fill="#D87D90" d="M176 136h44v14H176z"/><path fill="#89CCA9" d="M176 116h44v18H176z"/></g>
+              <g class="move" style="--hold:0 100%;--to:scaleY(0.93)" clip-path="url(#b3)"><path fill="#ECD290" d="M256 112h44v68H256z"/><path fill="#D87D90" d="M256 86h44v24H256z"/><path fill="#89CCA9" d="M256 54h44v30H256z"/><path fill="#6A99B5" d="M256 36h44v16H256z"/></g>
+              </g>
+              <path d="M48 180H312" stroke="#8C8479"/>
+            </svg>
+          </span>
+          <span class="tool-text">
+            <span class="tool-name">Bar chart editor</span>
+            <span class="tool-desc">Stacked or side by side, vertical or horizontal, with icons.</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="tool" href="chord/">
+          <span class="tool-art">
+            <svg viewBox="0 0 360 210" aria-hidden="true">
+              <g transform="translate(180 107)">
+              <g class="turn">
+              <g>
+              <path fill="#6A99B5" stroke="#F5F3EF" stroke-width="0.8" d="M-49.1,-59.3A77,77 0 0 1 -2.3,-77Q0.7,-14.1 10,-76.3A77,77 0 0 1 54.8,-54.1Q0.7,-14.1 -49.1,-59.3Z"/>
+              <path fill="#ECD290" stroke="#F5F3EF" stroke-width="0.8" d="M-40.9,65.2A77,77 0 0 1 -67.4,37.2Q1.8,7.3 77,0.8A77,77 0 0 1 67,38Q1.8,7.3 -40.9,65.2Z"/>
+              <path fill="#6A99B5" stroke="#F5F3EF" stroke-width="0.8" d="M-67.9,-36.2A77,77 0 0 1 -49.1,-59.3Q1.6,-6.3 71.5,-28.5A77,77 0 0 1 77,0.8Q1.6,-6.3 -67.9,-36.2Z"/>
+              <path fill="#89CCA9" stroke="#F5F3EF" stroke-width="0.8" d="M-69.2,33.8A77,77 0 0 1 -76.8,5.1Q-6.3,9.6 25.6,72.6A77,77 0 0 1 -3.8,76.9Q-6.3,9.6 -69.2,33.8Z"/>
+              <path fill="#D87D90" stroke="#F5F3EF" stroke-width="0.8" d="M-76.8,5.1A77,77 0 0 1 -73.9,-21.6Q-1.3,-5.2 54.8,-54.1A77,77 0 0 1 70,-32Q-1.3,-5.2 -76.8,5.1Z"/>
+              <path fill="#ECD290" stroke="#F5F3EF" stroke-width="0.8" d="M-16,75.3A77,77 0 0 1 -40.9,65.2Q2.8,12.3 65,41.3A77,77 0 0 1 46.9,61.1Q2.8,12.3 -16,75.3Z"/>
+              <path fill="#6A99B5" stroke="#F5F3EF" stroke-width="0.8" d="M-72.7,-25.3A77,77 0 0 1 -67.9,-36.2Q-3.9,4 36.6,67.8A77,77 0 0 1 25.6,72.6Q-3.9,4 -72.7,-25.3Z"/>
+              </g>
+              <path d="M10.5 -80.3A81 81 0 0 1 73.7 -33.7M75.2 -30A81 81 0 0 1 70.5 40M68.4 43.4A81 81 0 0 1 49.3 64.2M38.5 71.3A81 81 0 0 1 -4 80.9M-16.9 79.2A81 81 0 0 1 -70.9 39.2M-72.8 35.6A81 81 0 0 1 -77.7 -22.7M-76.5 -26.6A81 81 0 0 1 -2.4 -81" fill="none" stroke="#4a453d" stroke-width="3"/>
+              </g>
+              </g>
+            </svg>
+          </span>
+          <span class="tool-text">
+            <span class="tool-name">Chord editor</span>
+            <span class="tool-desc">Flows between nodes around a circle, for several scenarios.</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+    <div class="suite-foot">
+      <section class="prompts" aria-labelledby="prompts-title">
+        <h2 id="prompts-title">Prompts for AI assistance</h2>
+        <p>Each prompt teaches an AI chat assistant the YAML format of one editor. Show, download (as an <code>.md</code> file) or copy one to your clipboard, give it to the assistant with your (dummy) data or a description of the diagram, and open the YAML you get back as a <code>.yaml</code> file in the editor.</p>
+        <svg class="sprite" aria-hidden="true">
+          <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></symbol>
+          <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></symbol>
+          <symbol id="i-copy" viewBox="0 0 24 24"><path d="M9 9h11v11H9zM5 15H4V4h11v1"/></symbol>
+          <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+          <symbol id="i-lock" viewBox="0 0 24 24"><path d="M6 11h12v9H6zM8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></symbol>
+        </svg>
+        <ul class="prompt-links">
+          <li class="prompt">
+            <span class="prompt-name">Sankey<span class="prompt-word"> prompt</span></span>
+            <a class="prompt-act" href="prompts/sankey.md" target="_blank" rel="noopener" title="Show the Sankey prompt" aria-label="Show the Sankey prompt"><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-eye"/></svg></a>
+            <a class="prompt-act" href="prompts/sankey.md" download="sankey-prompt.md" title="Download the Sankey prompt (.md)" aria-label="Download the Sankey prompt"><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-download"/></svg></a>
+            <button class="prompt-act" type="button" data-copy="prompts/sankey.md" data-name="Sankey" title="Copy the Sankey prompt" aria-label="Copy the Sankey prompt" hidden><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-copy"/></svg></button>
+          </li>
+          <li class="prompt">
+            <span class="prompt-name">Ternary<span class="prompt-word"> prompt</span></span>
+            <a class="prompt-act" href="prompts/ternary.md" target="_blank" rel="noopener" title="Show the Ternary prompt" aria-label="Show the Ternary prompt"><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-eye"/></svg></a>
+            <a class="prompt-act" href="prompts/ternary.md" download="ternary-prompt.md" title="Download the Ternary prompt (.md)" aria-label="Download the Ternary prompt"><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-download"/></svg></a>
+            <button class="prompt-act" type="button" data-copy="prompts/ternary.md" data-name="Ternary" title="Copy the Ternary prompt" aria-label="Copy the Ternary prompt" hidden><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-copy"/></svg></button>
+          </li>
+          <li class="prompt">
+            <span class="prompt-name">Treemap<span class="prompt-word"> prompt</span></span>
+            <a class="prompt-act" href="prompts/treemap.md" target="_blank" rel="noopener" title="Show the Treemap prompt" aria-label="Show the Treemap prompt"><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-eye"/></svg></a>
+            <a class="prompt-act" href="prompts/treemap.md" download="treemap-prompt.md" title="Download the Treemap prompt (.md)" aria-label="Download the Treemap prompt"><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-download"/></svg></a>
+            <button class="prompt-act" type="button" data-copy="prompts/treemap.md" data-name="Treemap" title="Copy the Treemap prompt" aria-label="Copy the Treemap prompt" hidden><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-copy"/></svg></button>
+          </li>
+          <li class="prompt">
+            <span class="prompt-name">Waterfall<span class="prompt-word"> prompt</span></span>
+            <a class="prompt-act" href="prompts/waterfall.md" target="_blank" rel="noopener" title="Show the Waterfall prompt" aria-label="Show the Waterfall prompt"><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-eye"/></svg></a>
+            <a class="prompt-act" href="prompts/waterfall.md" download="waterfall-prompt.md" title="Download the Waterfall prompt (.md)" aria-label="Download the Waterfall prompt"><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-download"/></svg></a>
+            <button class="prompt-act" type="button" data-copy="prompts/waterfall.md" data-name="Waterfall" title="Copy the Waterfall prompt" aria-label="Copy the Waterfall prompt" hidden><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-copy"/></svg></button>
+          </li>
+          <li class="prompt">
+            <span class="prompt-name">Bar chart<span class="prompt-word"> prompt</span></span>
+            <a class="prompt-act" href="prompts/barchart.md" target="_blank" rel="noopener" title="Show the Bar chart prompt" aria-label="Show the Bar chart prompt"><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-eye"/></svg></a>
+            <a class="prompt-act" href="prompts/barchart.md" download="barchart-prompt.md" title="Download the Bar chart prompt (.md)" aria-label="Download the Bar chart prompt"><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-download"/></svg></a>
+            <button class="prompt-act" type="button" data-copy="prompts/barchart.md" data-name="Bar chart" title="Copy the Bar chart prompt" aria-label="Copy the Bar chart prompt" hidden><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-copy"/></svg></button>
+          </li>
+          <li class="prompt">
+            <span class="prompt-name">Chord<span class="prompt-word"> prompt</span></span>
+            <a class="prompt-act" href="prompts/chord.md" target="_blank" rel="noopener" title="Show the Chord prompt" aria-label="Show the Chord prompt"><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-eye"/></svg></a>
+            <a class="prompt-act" href="prompts/chord.md" download="chord-prompt.md" title="Download the Chord prompt (.md)" aria-label="Download the Chord prompt"><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-download"/></svg></a>
+            <button class="prompt-act" type="button" data-copy="prompts/chord.md" data-name="Chord" title="Copy the Chord prompt" aria-label="Copy the Chord prompt" hidden><svg class="icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><use href="#i-copy"/></svg></button>
+          </li>
+        </ul>
+        <p class="prompts-local"><svg class="icon" viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><use href="#i-lock"/></svg><span>Your data stays local: an editor reads the <code>.yaml</code> file in your browser and never sends it over the internet. Only what you share with an AI assistant leaves your computer.</span></p>
+        <p class="sr-only" aria-live="polite" id="prompt-status"></p>
+      </section>
+      <footer class="landing-foot">&copy; Tijs Langeveld, 2026</footer>
+    </div>
+  </main>
+  <script type="module" src="shared/src/landing.js"></script>
+</body>
+</html>

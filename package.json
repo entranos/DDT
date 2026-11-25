@@ -1,0 +1,14 @@
+{
+  "name": "energy-diagram-tools",
+  "private": true,
+  "description": "Diagram design toolkit: sankey, ternary, treemap, waterfall, bar chart and chord editors. Static web apps, no build step.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node --test \"tests/*.test.mjs\""
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

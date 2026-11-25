@@ -1,0 +1,249 @@
+type: ternary
+version: '1.0'
+axes:
+  - id: bio_overig
+    label: Bio & overig
+    corner: left
+    low: Weinig bio & overig
+    high: Veel bio & overig
+  - id: elektronen
+    label: Elektronen
+    corner: right
+    low: Weinig elektronen
+    high: Veel elektronen
+  - id: fossiel
+    label: Fossiel
+    corner: bottom
+    low: Weinig fossiel
+    high: Veel fossiel
+series:
+  - id: historie
+    title: Historie
+    group: ''
+    color: '#8C8479'
+    style: dashed
+    highlight: false
+    visible: true
+  - id: basis
+    title: Basispad
+    group: ''
+    color: '#1F3F66'
+    style: solid
+    highlight: true
+    visible: true
+  - id: elek_snel
+    title: Elektrificatie, snel
+    group: Elektrificatie
+    color: ''
+    style: solid
+    highlight: false
+    visible: true
+  - id: elek_laat
+    title: Elektrificatie, laat
+    group: Elektrificatie
+    color: ''
+    style: solid
+    highlight: false
+    visible: true
+  - id: mol_import
+    title: Moleculen, import
+    group: Moleculen
+    color: ''
+    style: solid
+    highlight: false
+    visible: true
+  - id: mol_binnenland
+    title: Moleculen, binnenland
+    group: Moleculen
+    color: ''
+    style: solid
+    highlight: false
+    visible: true
+points:
+  - series: historie
+    year: 2000
+    bio_overig: 84
+    elektronen: 336
+    fossiel: 1680
+  - series: historie
+    year: 2005
+    bio_overig: 131
+    elektronen: 371
+    fossiel: 1679
+  - series: historie
+    year: 2010
+    bio_overig: 154
+    elektronen: 396
+    fossiel: 1650
+  - series: historie
+    year: 2015
+    bio_overig: 164
+    elektronen: 390
+    fossiel: 1497
+  - series: historie
+    year: 2020
+    bio_overig: 195
+    elektronen: 410
+    fossiel: 1346
+  - series: historie
+    year: 2025
+    bio_overig: 244
+    elektronen: 432
+    fossiel: 1203
+  - series: basis
+    year: 2025
+    bio_overig: 244
+    elektronen: 432
+    fossiel: 1203
+  - series: basis
+    year: 2030
+    bio_overig: 299
+    elektronen: 528
+    fossiel: 933
+  - series: basis
+    year: 2035
+    bio_overig: 328
+    elektronen: 640
+    fossiel: 672
+  - series: basis
+    year: 2040
+    bio_overig: 354
+    elektronen: 739
+    fossiel: 447
+  - series: basis
+    year: 2045
+    bio_overig: 382
+    elektronen: 809
+    fossiel: 279
+  - series: basis
+    year: 2050
+    bio_overig: 398
+    elektronen: 852
+    fossiel: 170
+  - series: elek_snel
+    year: 2025
+    bio_overig: 244
+    elektronen: 432
+    fossiel: 1203
+  - series: elek_snel
+    year: 2030
+    bio_overig: 287
+    elektronen: 608
+    fossiel: 794
+  - series: elek_snel
+    year: 2035
+    bio_overig: 275
+    elektronen: 765
+    fossiel: 490
+  - series: elek_snel
+    year: 2040
+    bio_overig: 270
+    elektronen: 866
+    fossiel: 284
+  - series: elek_snel
+    year: 2045
+    bio_overig: 272
+    elektronen: 925
+    fossiel: 163
+  - series: elek_snel
+    year: 2050
+    bio_overig: 277
+    elektronen: 950
+    fossiel: 92
+  - series: elek_laat
+    year: 2025
+    bio_overig: 244
+    elektronen: 432
+    fossiel: 1203
+  - series: elek_laat
+    year: 2030
+    bio_overig: 252
+    elektronen: 486
+    fossiel: 1062
+  - series: elek_laat
+    year: 2035
+    bio_overig: 275
+    elektronen: 568
+    fossiel: 877
+  - series: elek_laat
+    year: 2040
+    bio_overig: 308
+    elektronen: 697
+    fossiel: 616
+  - series: elek_laat
+    year: 2045
+    bio_overig: 302
+    elektronen: 831
+    fossiel: 378
+  - series: elek_laat
+    year: 2050
+    bio_overig: 300
+    elektronen: 915
+    fossiel: 215
+  - series: mol_import
+    year: 2025
+    bio_overig: 244
+    elektronen: 432
+    fossiel: 1203
+  - series: mol_import
+    year: 2030
+    bio_overig: 346
+    elektronen: 473
+    fossiel: 1001
+  - series: mol_import
+    year: 2035
+    bio_overig: 475
+    elektronen: 510
+    fossiel: 774
+  - series: mol_import
+    year: 2040
+    bio_overig: 595
+    elektronen: 561
+    fossiel: 544
+  - series: mol_import
+    year: 2045
+    bio_overig: 697
+    elektronen: 614
+    fossiel: 349
+  - series: mol_import
+    year: 2050
+    bio_overig: 761
+    elektronen: 648
+    fossiel: 211
+  - series: mol_binnenland
+    year: 2025
+    bio_overig: 244
+    elektronen: 432
+    fossiel: 1203
+  - series: mol_binnenland
+    year: 2030
+    bio_overig: 340
+    elektronen: 501
+    fossiel: 949
+  - series: mol_binnenland
+    year: 2035
+    bio_overig: 442
+    elektronen: 561
+    fossiel: 697
+  - series: mol_binnenland
+    year: 2040
+    bio_overig: 518
+    elektronen: 632
+    fossiel: 470
+  - series: mol_binnenland
+    year: 2045
+    bio_overig: 593
+    elektronen: 686
+    fossiel: 281
+  - series: mol_binnenland
+    year: 2050
+    bio_overig: 664
+    elektronen: 710
+    fossiel: 136
+settings:
+  - setting: title
+    waarde: Energiemix-trajecten (voorbeeld met fictieve waarden)
+  - setting: markYear
+    waarde: 2030
+  - setting: unit
+    waarde: PJ

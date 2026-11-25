@@ -1,0 +1,15 @@
+/* Fonts bundled in ../fonts. "Roboto" is the default diagram and interface
+   font; "RO Sans" and "RO Serif" can be chosen in the diagram settings.
+   Image export embeds the same files (../src/imageExport.js). */
+
+@font-face { font-family: "Roboto"; font-weight: 300; font-style: normal; font-display: swap; src: url("../fonts/roboto-latin-300-normal.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 400; font-style: normal; font-display: swap; src: url("../fonts/roboto-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 500; font-style: normal; font-display: swap; src: url("../fonts/roboto-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 700; font-style: normal; font-display: swap; src: url("../fonts/roboto-latin-700-normal.woff2") format("woff2"); }
+
+@font-face { font-family: "RO Sans"; font-weight: normal; font-style: normal; font-display: swap; src: url("../fonts/ROsanswebtextregular.woff") format("woff"), url("../fonts/ROsanswebtextregular.ttf") format("truetype"); }
+@font-face { font-family: "RO Sans"; font-weight: bold; font-style: normal; font-display: swap; src: url("../fonts/ROsanswebtextbold.woff") format("woff"), url("../fonts/ROsanswebtextbold.ttf") format("truetype"); }
+@font-face { font-family: "RO Sans"; font-weight: normal; font-style: italic; font-display: swap; src: url("../fonts/ROsanswebtextitalic.woff") format("woff"), url("../fonts/ROsanswebtextitalic.ttf") format("truetype"); }
+@font-face { font-family: "RO Serif"; font-weight: normal; font-style: normal; font-display: swap; src: url("../fonts/ROserifwebregular.woff") format("woff"), url("../fonts/ROserifwebregular.ttf") format("truetype"); }
+@font-face { font-family: "RO Serif"; font-weight: bold; font-style: normal; font-display: swap; src: url("../fonts/ROserifwebbold.woff") format("woff"), url("../fonts/ROserifwebbold.ttf") format("truetype"); }
+@font-face { font-family: "RO Serif"; font-weight: normal; font-style: italic; font-display: swap; src: url("../fonts/ROserifwebitalic.woff") format("woff"), url("../fonts/ROserifwebitalic.ttf") format("truetype"); }
